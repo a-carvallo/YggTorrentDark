@@ -5,6 +5,14 @@
         color: #cbd1da;
     }
 
+    #middle .row .results tr td:nth-child(8) {
+	    color: #4caf50;
+    }
+
+     #middle .row .results tr td:nth-child(9) {
+        color: #f44336;
+    }
+
     /* little comment icon */
     #middle .row .results td .ico_comment {
         color: #cbd1da;
