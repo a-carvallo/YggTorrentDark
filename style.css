@@ -1,4 +1,4 @@
-@-moz-document domain("yggtorrent.is"), domain("ygg.is") {
+@-moz-document domain("yggtorrent.to") {
     /* results table */
     #middle .row .results tr:nth-child(odd) td {
         background: #2a313ce8;
@@ -6,7 +6,7 @@
     }
 
     #middle .row .results tr td:nth-child(8) {
-	    color: #4caf50;
+        color: #4caf50;
     }
 
      #middle .row .results tr td:nth-child(9) {
@@ -45,7 +45,7 @@
     #middle .row .search-criteria td.adv_search_option,
     #middle .row .search-criteria td:first-child {
         background: #354150;
-        color: #cbd1da;
+        color: #cbd1da !important;
     }
 
     #middle .row .search-criteria td {
@@ -88,11 +88,11 @@
         border: 1px solid #1b1e24;
     }
 
-    .select2-container--default .select2-selection--single {
+    .select2-container--bootstrap .select2-selection--single {
         background-color: #2a313c;
     }
 
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
+    .select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
         color: #6c798d;
     }
 
@@ -101,25 +101,31 @@
         color: #6c798d;
     }
 
-    .select2-container--default .select2-search--dropdown .select2-search__field {
-        border: 1px solid #1b1e24;
+    .select2-container--bootstrap .select2-dropdown{
+         border: 1px solid #1b1e24;
     }
 
-    .select2-container--default .select2-results__option[aria-selected=true] {
+    .select2-container--bootstrap .select2-search--dropdown .select2-search__field {
+        border: 1px solid #1b1e24;
+                background-color: #2a313c;
+        color: #6c798d;
+    }
+
+    .select2-container--bootstrap .select2-results__option[aria-selected=true] {
         background-color: #354150;
     }
 
-	.select2-container--default .select2-selection--multiple {
-		background-color: #2a313c;
+    .select2-container--bootstrap .select2-selection {
+        background-color: #2a313c;
         border: 1px solid #1b1e24 !important;
     }
 
-	.select2-container--default .select2-selection--multiple .select2-selection__rendered {
-		border: none;
+    .select2-container--bootstrap .select2-selection .select2-selection__rendered {
+        border: none;
     }
 
-	.select2-container, .select2-container--default {
-    	width: 400px !important;
+    .select2-container, .select2-container--bootstrap {
+        width: 400px !important;
     }
 
     /* search forms & other inputs heh */
@@ -169,7 +175,7 @@
     }
 
     #middle .default {
-        background: #354150;
+        background: #354150 !important; /* override messages */
         color: #cbd1da;
     }
 
@@ -205,13 +211,13 @@
     #commentary li .message:after {
         border-right: 15px solid #6c798d;
     }
-	
-	#commentary li .message .add {
-		color: #cbd1da;
+    
+    #commentary li .message .add {
+        color: #cbd1da;
     }
     
-	#commentary li .message a {
-		color: #fff;
+    #commentary li .message a {
+        color: #fff;
     }
 
     #commentary li .left {
@@ -303,28 +309,45 @@
         color: #6c798d;
     }
 
-	/* account */
-	#middle .row table.detail-account {
-		border-left: 2px solid #6c798d;
+    /* account */
+    #middle .row table.detail-account {
+        border-left: 2px solid #6c798d;
     }
 
-	#middle .row table td.adv_search_option,
-	#middle .row table td:first-child {
+    #middle .row table td.adv_search_option,
+    #middle .row table td:first-child {
         background: #354150;
-        color: #cbd1da;                             
+        color: #cbd1da;
     }
-	
-	#middle .row table td {
+    
+    #middle .row table td {
         background: #354150;
         color: #cbd1da;
         border-right: 1px solid #1b1e24;
         border-bottom: 1px solid #1b1e24;
     }
 
-	#middle .avatar-account {
-		background: #354150;
-    	padding-bottom: 100%;
-     	margin-bottom: -100%;
+    .card {
+        background: #354150;
+    }
+
+    .card-footer {
+        border-top: 1px solid rgba(27, 30, 36, .4) !important;
+        background: #354150;
+    }
+
+    /* messages */
+    .table-bordered {
+          border: solid 1px #1b1e24;
+    }
+
+    .inbox thead th {
+        background: #354150;
+        color: #cbd1da;
+    }
+
+    .inbox thead td {
+        border: solid 1px #1b1e24;
     }
 
     /* fix lag on top page with menus */
