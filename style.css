@@ -354,4 +354,10 @@
     [role=button], a, area, button, input, label, select, summary, textarea {
         touch-action: auto;
     }
+    
+    /* Home page posted by */
+    #middle .default .date, #middle #description .date {
+        background: #2c343f;
+        border-top: 1px solid rgba(27, 30, 36, .4);
+    }
 }
