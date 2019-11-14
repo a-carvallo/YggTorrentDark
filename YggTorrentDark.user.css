@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name         YggTorrent Dark
+@version      1.6.1
+@description  Dark theme for YggTorrent based on original colors
+@author       Alexandre Carvallo
+@homepageURL  https://github.com/a-carvallo/YggTorrentDark
+@supportURL   https://github.com/a-carvallo/YggTorrentDark/issues
+@updateURL    https://raw.githubusercontent.com/a-carvallo/YggTorrentDark/master/YggTorrentDark.user.css
+@license      CC BY-NC-SA-4.0
+==/UserStyle== */
+
 @-moz-document domain("yggtorrent.pe"), domain("yggtorrent.ch") {
     /* results table */
     #middle .row .results tr:nth-child(odd) td {
