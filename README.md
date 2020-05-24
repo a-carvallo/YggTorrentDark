@@ -10,7 +10,7 @@ Installez [Stylus](https://github.com/openstyles/stylus):
 - Chrome: https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne
 - Opera: https://addons.opera.com/extensions/details/stylus/
 
-Installez le thème avec Stylus: [Lien (GitHub)](https://raw.githubusercontent.com/a-carvallo/YggTorrentDark/master/YggTorrentDark.user.css)
+Installez le thème avec Stylus: [![Installer avec Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://raw.githubusercontent.com/a-carvallo/YggTorrentDark/master/YggTorrentDark.user.css)
 
 Le thème est également sur userstyles.org: [Lien](https://userstyles.org/styles/158368/yggtorrent-dark)
 

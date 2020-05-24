@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         YggTorrent Dark
-@version      1.6.3
+@version      1.7
 @description  Dark theme for YggTorrent based on original colors
 @author       Alexandre Carvallo
 @namespace    a-carvallo
@@ -8,9 +8,38 @@
 @supportURL   https://github.com/a-carvallo/YggTorrentDark/issues
 @updateURL    https://raw.githubusercontent.com/a-carvallo/YggTorrentDark/master/YggTorrentDark.user.css
 @license      CC BY-NC-SA-4.0
+@preprocessor stylus
+@var checkbox hide-donate-bonus "Cacher pubs bonus don" 0
+@var checkbox hide-side-menu "Cacher menu latéral" 0
+@var checkbox hide-iptv "Cacher IPTV du menu" 0
 ==/UserStyle== */
 
 @-moz-document domain("yggtorrent.se"), domain("yggtorrent.pe"), domain("yggtorrent.ch") {
+    /* user choices */
+    if hide-donate-bonus {
+        #over-18-notification {
+            display: none;
+        }
+        .donate.pulse {
+            display: none;
+        }
+    }
+
+    if hide-iptv {
+        #top nav>ul>li:nth-of-type(2) {
+            display: none;
+        }
+        #top nav>ul>li {
+            width: 12.5%;
+        }
+    }
+
+    if hide-side-menu {
+        #cat {
+            display: none;
+        }
+    }
+
     /* results table */
     #middle .row .results tr:nth-child(odd) td {
         background: #2a313ce8;
@@ -21,7 +50,7 @@
         color: #4caf50;
     }
 
-     #middle .row .results tr td:nth-child(9) {
+    #middle .row .results tr td:nth-child(9) {
         color: #f44336;
     }
 
@@ -51,7 +80,7 @@
 
     /* search form */
     #middle .row .search-criteria {
-        background: #354150;                                  
+        background:#354150;
     }
 
     #middle .row .search-criteria td.adv_search_option,
@@ -113,13 +142,13 @@
         color: #6c798d;
     }
 
-    .select2-container--bootstrap .select2-dropdown{
-         border: 1px solid #1b1e24;
+    .select2-container--bootstrap .select2-dropdown {
+        border: 1px solid #1b1e24;
     }
 
     .select2-container--bootstrap .select2-search--dropdown .select2-search__field {
         border: 1px solid #1b1e24;
-                background-color: #2a313c;
+        background-color: #2a313c;
         color: #6c798d;
     }
 
@@ -186,9 +215,28 @@
         border-bottom: 1px solid #1b1e24;
     }
 
+    #middle table td .red {
+        /* leechers */
+        color: #ef5f5f;
+    }
+
     #middle .default {
-        background: #354150 !important; /* override messages */
+        /* override messages */
+        background: #354150 !important;
         color: #cbd1da;
+    }
+
+    #middle .default font {
+        color: #cbd1da;
+    }
+
+    #middle .default a {
+        color: #5ad9a4;
+    }
+
+    /* modal nfo */
+    #nfoModal .modal-sm {
+        max-width: 60% !important;
     }
 
     /* comments */
@@ -223,11 +271,11 @@
     #commentary li .message:after {
         border-right: 15px solid #6c798d;
     }
-    
+
     #commentary li .message .add {
         color: #cbd1da;
     }
-    
+
     #commentary li .message a {
         color: #fff;
     }
@@ -235,6 +283,14 @@
     #commentary li .left {
         background: #6c798d;
         border: 1px solid #1b1e24;
+    }
+
+    #comment-list li img[src$="/static/images/avatar.jpg"] {
+        filter: invert(70%);
+    }
+
+    #comment-list li .ratio .red {
+        color: #9c0b0b;
     }
 
     /* comment wysibb */
@@ -281,42 +337,42 @@
     #connect {
         background: #2c343f;
     }
-    
+
     #connect h3 {
         color: #cbd1da;
     }
-    
+
     #connect input {
         background: #2a313c;
         color: #6c798d;
         border-top: 1px solid #1b1e24;
     }
-    
+
     #connect input:focus {
         color: #cbd1da;
     }
-    
+
     #connect a {
         color: #6c798d;
     }
-    
+
     #connect a:hover {
         color: #cbd1da;
     }
-    
+
     /* register form */
     .form-control:focus {
         background: #2a313c;
         color: #cbd1da;
         border-color: #6c798d !important;
     }
-    
+
     .form-control,
     .select2-selection__rendered,
     .select2-selection__rendered {
         color: #6c798d;
     }
-    
+
     .field-label-responsive label {
         color: #6c798d;
     }
@@ -331,7 +387,7 @@
         background: #354150;
         color: #cbd1da;
     }
-    
+
     #middle .row table td {
         background: #354150;
         color: #cbd1da;
@@ -348,9 +404,15 @@
         background: #354150;
     }
 
+    /* avatar top panel */
+    #top_panel img[src$="/static/images/avatar.jpg"] {
+        filter: invert(70%);
+        border-color: rgba(0, 0, 0, .125);
+    }
+
     /* messages */
     .table-bordered {
-          border: solid 1px #1b1e24;
+        border: solid 1px #1b1e24;
     }
 
     .inbox thead th {
@@ -362,11 +424,44 @@
         border: solid 1px #1b1e24;
     }
 
+    /* user profile */
+    #middle section.content div.row div.card img[src$="/static/images/avatar.jpg"] {
+        filter: invert(70%);
+    }
+
+    /* domains page */
+    .well {
+        background-color: #343a40;
+        border-color: rgba(0, 0, 0, .125);
+    }
+
+    .well[style^="background: #fff"] {
+        /* head */
+        background-color: #6c757d !important;
+        border-color: rgba(0, 0, 0, .125);
+    }
+
+    .well[style^="background: #e0ffd7"] {
+        /* ok */
+        background-color: #48a648 !important;
+    }
+
+    .well[style^="background: #f0f0f0"] {
+        /* bad */
+        text-decoration: line-through;
+        background-color: #555 !important;
+        border-color: rgba(0, 0, 0, .125);
+    }
+
+    .well strong[style^="color: #3b454e"] {
+        color: #cbd1da !important;
+    }
+
     /* fix lag on top page with menus */
     [role=button], a, area, button, input, label, select, summary, textarea {
         touch-action: auto;
     }
-    
+
     /* Home page posted by */
     #middle .default .date, #middle #description .date {
         background: #2c343f;
