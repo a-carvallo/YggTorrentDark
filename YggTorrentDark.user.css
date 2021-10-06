@@ -238,6 +238,20 @@
     #nfoModal .modal-sm {
         max-width: 60% !important;
     }
+    
+    #nfoModal .modal-body {
+        background-color: #354150 !important;
+        color: #cbd1da;
+    }
+
+    #nfoModal .modal-header {
+        border-color: rgba(0, 0, 0, .125);
+    }    
+    
+    #nfoModal .modal-footer {
+        background-color: #354150 !important;
+        border-color: rgba(0, 0, 0, .125);
+    }
 
     /* comments */
     #commentary {
@@ -466,5 +480,5 @@
     #middle .default .date, #middle #description .date {
         background: #2c343f;
         border-top: 1px solid rgba(27, 30, 36, .4);
-    }
+    }    
 }
