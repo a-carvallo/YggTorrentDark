@@ -467,4 +467,19 @@
         background: #2c343f;
         border-top: 1px solid rgba(27, 30, 36, .4);
     }
+
+    /* NFO modal */
+    .modal-header {
+        border-color: rgba(0, 0, 0, .125);
+    }    
+
+    #nfo {
+        background-color: #354150 !important;
+        color: #cbd1da;
+    }
+    
+    .modal-footer {
+        background-color: #354150 !important;
+        border-color: rgba(0, 0, 0, .125);
+    }
 }
