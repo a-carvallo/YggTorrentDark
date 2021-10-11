@@ -299,7 +299,7 @@
         border: 1px solid #1b1e24;
     }
 
-    #comment-list li img[src$="/static/images/avatar.jpg"] {
+    #comment-list li img[src$="/assets/img/avatar.jpg"] {
         filter: invert(70%);
     }
 
@@ -419,7 +419,7 @@
     }
 
     /* avatar top panel */
-    #top_panel img[src$="/static/images/avatar.jpg"] {
+    #top_panel img[src$="/assets/img/avatar.jpg"] {
         filter: invert(70%);
         border-color: rgba(0, 0, 0, .125);
     }
@@ -439,7 +439,7 @@
     }
 
     /* user profile */
-    #middle section.content div.row div.card img[src$="/static/images/avatar.jpg"] {
+    #middle section.content div.row div.card img[src$="/assets/img/avatar.jpg"] {
         filter: invert(70%);
     }
 
