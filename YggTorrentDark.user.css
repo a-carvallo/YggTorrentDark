@@ -11,7 +11,6 @@
 @preprocessor stylus
 @var checkbox hide-donate-bonus "Cacher pubs bonus don" 0
 @var checkbox hide-side-menu "Cacher menu latéral" 0
-@var checkbox hide-iptv "Cacher IPTV du menu" 0
 ==/UserStyle== */
 
 @-moz-document domain("yggtorrent.re"), domain("yggtorrent.nz"), domain("yggtorrent.si"), domain("yggtorrent.se"), domain("yggtorrent.pe"), domain("yggtorrent.ch") {
