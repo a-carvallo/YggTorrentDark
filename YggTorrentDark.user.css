@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         YggTorrent Dark
-@version      1.7.4
+@version      1.7.5
 @description  Dark theme for YggTorrent based on original colors
 @author       Alexandre Carvallo
 @namespace    a-carvallo
@@ -14,7 +14,7 @@
 @var checkbox hide-iptv "Cacher IPTV du menu" 0
 ==/UserStyle== */
 
-@-moz-document domain("yggtorrent.nz"), domain("yggtorrent.li"), domain("yggtorrent.si"), domain("yggtorrent.se"), domain("yggtorrent.pe"), domain("yggtorrent.ch") {
+@-moz-document domain("yggtorrent.re"), domain("yggtorrent.nz"), domain("yggtorrent.si"), domain("yggtorrent.se"), domain("yggtorrent.pe"), domain("yggtorrent.ch") {
     /* user choices */
     if hide-donate-bonus {
         #over-18-notification {
@@ -22,15 +22,6 @@
         }
         .donate.pulse {
             display: none;
-        }
-    }
-
-    if hide-iptv {
-        #top nav>ul>li:nth-of-type(2) {
-            display: none;
-        }
-        #top nav>ul>li {
-            width: 12.5%;
         }
     }
 
