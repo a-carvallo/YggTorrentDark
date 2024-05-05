@@ -13,7 +13,7 @@
 @var checkbox hide-side-menu "Cacher menu latéral" 0
 ==/UserStyle== */
 
-@-moz-document domain("yggtorrent.qa") {
+@-moz-document domain("yggtorrent.cool") {
     /* user choices */
     if hide-donate-bonus {
         #over-18-notification {
