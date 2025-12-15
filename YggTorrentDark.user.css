@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         YggTorrent Dark
-@version      1.8.3
+@version      1.8.4
 @description  Dark theme for YggTorrent based on original colors
 @author       Alexandre Carvallo
 @namespace    a-carvallo
@@ -13,7 +13,7 @@
 @var checkbox hide-side-menu "Cacher menu latéral" 0
 ==/UserStyle== */
 
-@-moz-document domain("yggtorrent.top") {
+@-moz-document domain("yggtorrent.org") {
     /* user choices */
     if hide-donate-bonus {
         #over-18-notification {
