@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         YggTorrent Dark
-@version      1.8.4
+@version      1.8.5
 @description  Dark theme for YggTorrent based on original colors
 @author       Alexandre Carvallo
 @namespace    a-carvallo
@@ -9,8 +9,11 @@
 @updateURL    https://raw.githubusercontent.com/a-carvallo/YggTorrentDark/master/YggTorrentDark.user.css
 @license      CC BY-NC-SA-4.0
 @preprocessor stylus
-@var checkbox hide-donate-bonus "Cacher pubs bonus don" 0
+@var checkbox hide-donate-bonus "Cacher pubs bonus don" 1
 @var checkbox hide-side-menu "Cacher menu latéral" 0
+@var checkbox hide-xxx "Cacher liens/incrustations 'XXX'" 1
+@var checkbox hide-vpn "Cacher lien VPN" 1
+@var checkbox hide-turbo "Cacher le turbo" 1
 ==/UserStyle== */
 
 @-moz-document domain("yggtorrent.org") {
@@ -22,6 +25,9 @@
         .donate.pulse {
             display: none;
         }
+        body > div.promo-container {
+            display: none !important;
+        }
     }
 
     if hide-side-menu {
@@ -29,7 +35,46 @@
             display: none;
         }
     }
+    
+    if hide-xxx {
+        #yggPromoRowLc {
+            display: none;
+        }
+        #middle table.infos-torrent > tbody > tr > td a.ygg-cam-link-btn {
+            display: none;
+        }
+        #yggLivecamBanner {
+            display: none;
+        }
+    }
+        
+    if hide-vpn {
+        #top nav > ul > li:has(> a[href^="https://tinyurl.com/"]) {
+            display: none;
+        }
+        #top nav > ul > li.color {
+            width: calc(100% / 7);
+        }
+    }
 
+    if hide-turbo {
+        #middle table.infos-torrent > tbody > tr > td a[href$="/user/turbo"] {
+            display: none;
+        }
+        #top_panel > div.ct > ul > li strong:has(a[href$="/user/turbo"]) {
+            display: none;
+        }
+        #top_panel div.panel-menu > ul > li:has(a[href$="/user/donate"]) {
+            display: none;
+        }
+    }
+
+    /* inline remaining download */
+    #middle table.infos-torrent > tbody > tr > td a#download-timer-btn + div {
+        display: inline !important;
+        white-space: nowrap;
+    }
+    
     /* results table */
     #middle .row .results {
         background-color: #25272f;
